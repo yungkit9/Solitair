@@ -33,7 +33,14 @@ public class CardMoveChecks {
      */
     public static void checkPlayerInput(String[] input) throws MoveException{
         // TODO: Write implementation
+        Scanner sc = new Scanner (System.in);
 
+        while (!sc.hasNext("M")) {
+            throw new MoveException("Invalid Move syntax. 'Z' is not a valid destination location.\nSee H̲elp for instructions.");
+
+        }
+        String text = sc.next();
+        System.out.println("Thank you! Got " + text);
     }
 
     /**
